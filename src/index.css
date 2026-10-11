@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #050817;
+    --bg-secondary: #091126;
+    --card-bg: #0B1428;
+    --color-violet: #8B5CF6;
+    --color-blue: #168BFF;
+    --color-cyan: #22D3EE;
+    --color-teal: #00E6B8;
+    --color-amber: #FFB020;
+    --color-magenta: #F044A7;
+    --text-primary: #F4F7FF;
+    --text-secondary: #B9C5DF;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom scrollbar for deep dark gaming dashboard */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050817;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #15203D;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #233566;
+}
+
+/* Glow effects matching the screenshot */
+.glow-teal {
+  box-shadow: 0 0 20px -3px rgba(0, 230, 184, 0.25);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px -3px rgba(22, 139, 255, 0.25);
+}
+
+.glow-amber {
+  box-shadow: 0 0 20px -3px rgba(255, 176, 32, 0.25);
+}
+
+.glow-violet {
+  box-shadow: 0 0 20px -3px rgba(139, 92, 246, 0.25);
+}
+
+.glow-magenta {
+  box-shadow: 0 0 20px -3px rgba(240, 68, 167, 0.25);
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+@keyframes fanFastSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fan-running-spin {
+  animation: fanFastSpin 0.35s linear infinite !important;
+  transform-origin: center center;
+}
+
+@keyframes windGust {
+  0% {
+    opacity: 0.2;
+    transform: translateX(0px) scaleX(0.85);
+  }
+  50% {
+    opacity: 0.95;
+    transform: translateX(-12px) scaleX(1.15);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateX(-24px) scaleX(0.9);
+  }
+}
+
+.wind-stream {
+  animation: windGust 0.7s ease-in-out infinite;
+}
+

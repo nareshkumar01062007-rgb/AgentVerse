@@ -1,0 +1,7 @@
+{
+  "name": "AgentVerse — Interactive AI Agent Learning Platform",
+  "description": "Play as 5 intelligent AI agents, experience their decisions, and discover the algorithms behind them with interactive Python code and visual learning labs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
